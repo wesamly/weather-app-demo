@@ -11,11 +11,11 @@ class WeatherController extends Controller
 
     public function index()
     {
-        $cities = City::all(); // Fetch all cities
+        $cities = City::filter()->get(); // Fetch all cities
 
         return view('weather.index', compact('cities'));
     }
-    
+
     public function show($code)
     {
         $city = City::where('code', $code)->firstOrFail();
