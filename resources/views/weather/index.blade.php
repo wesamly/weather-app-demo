@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Cities</h1>
-
+    <hr>
     <ul>
         @forelse ($cities as $city)
             <li>
